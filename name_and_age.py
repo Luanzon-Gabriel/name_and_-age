@@ -9,6 +9,10 @@ while True:
     if len(name) == 1:
         print("Error: Name must not be equal to 1 letter.")
 
+    if age < 0 or age > 120:
+        print ("Error: Age must be number between 0 and 120.")
+
+
 
 
     
