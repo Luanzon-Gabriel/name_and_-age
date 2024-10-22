@@ -5,17 +5,32 @@ while True:
 
     name_and_age = {}
 
+    while True:
 
-    name = input("Pls input name: ")
-        
-    if not name.isalpha() or len(name) == 1:
-            
-            print("Error: Name must only contain alphabetic characters and must be more than 1 letter.")  
-            
-    age = int(input("Please input age: "))
+        name = input("Pls input name: ")
+
+        if name.isalpha() and len(name) > 1:
+            break 
+
+        else:
+            print("Error: Name must only contain alphabetic characters and must be more than 1 letter.")
     
-    if age < 0 or age > 120:
-        print("Error: Age must be a number between 0 and 120.")
+   
+    while True:
+
+        age_input = input("Pls input age: ")
+
+        try:
+            age = int(age_input)
+
+            if 0 <= age <= 120:
+                break 
+
+            else:
+                print("Error: Age must be a number between 0 and 120.")
+
+        except ValueError:
+            print("Error: Age must be a valid number.")
 
     retry = input("Input again? (Yes/No) ")
             
