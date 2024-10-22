@@ -9,11 +9,11 @@ while True:
 
         name = input("Pls input name: ")
 
-        if len(name.split()) >= 2 and all(char.isalpha() or char in [" ", "'", "-"] for char in name):
+        if len(name.split()) >= 2 and all(char.isalpha() or char in [" ", "'", "-", "."] for char in name):
             break 
 
         else:
-            print("Error: Name must be a full name containing at least two words, with alphabetic characters, spaces, apostrophes, or hyphens.")
+            print("Error: Name must be a full name containing at least two words, with alphabetic characters, spaces, apostrophes, period, or hyphens.")
   
     while True:
 
