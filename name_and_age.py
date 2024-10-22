@@ -8,15 +8,14 @@ while True:
 
     name = input("Pls input name: ")
         
-    if len(name) == 1:
+    if not name.isalpha() or len(name) == 1:
             
-            print("Error: Name must not be equal to 1 letter.")  
-
-    age = int(input("Pls input age: "))
-
+            print("Error: Name must only contain alphabetic characters and must be more than 1 letter.")  
+            
+    age = int(input("Please input age: "))
+    
     if age < 0 or age > 120:
-
-        print ("Error: Age must be number between 0 and 120.")
+        print("Error: Age must be a number between 0 and 120.")
 
     retry = input("Input again? (Yes/No) ")
             
