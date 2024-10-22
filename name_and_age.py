@@ -9,13 +9,12 @@ while True:
 
         name = input("Pls input name: ")
 
-        if name.isalpha() and len(name) > 1:
+        if len(name.split()) >= 2 and all(char.isalpha() or char in [" ", "'", "-"] for char in name):
             break 
 
         else:
-            print("Error: Name must only contain alphabetic characters and must be more than 1 letter.")
-    
-   
+            print("Error: Name must be a full name containing at least two words, with alphabetic characters, spaces, apostrophes, or hyphens.")
+  
     while True:
 
         age_input = input("Pls input age: ")
